@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SSSL</name>
+    </assembly>
+    <members>
+        <member name="T:SSSL.Timer">
+            <summary>
+            Timer class extending Unity's built in time class to time set durations and indefinitely
+            </summary>
+        </member>
+        <member name="P:SSSL.Timer.startTime">
+            <summary>
+            The time that the timer started at.
+            </summary>
+        </member>
+        <member name="P:SSSL.Timer.duration">
+            <summary>
+            Duration of the timer.
+            </summary>
+        </member>
+        <member name="P:SSSL.Timer.endTime">
+            <summary>
+            The time that the timer will end.
+            </summary>
+        </member>
+        <member name="M:SSSL.Timer.#ctor">
+            <summary>
+            Create a Timer that will count indefinitely.
+            </summary>
+        </member>
+        <member name="M:SSSL.Timer.#ctor(System.Single)">
+            <summary>
+            Create a Timer set to time to the duration.
+            </summary>
+            <param name="duration">Timer will time to this duration: from 0, to infinity.</param>
+        </member>
+        <member name="M:SSSL.Timer.GetTime">
+            <summary>
+            Returns the time elapsed since the Timer was started.
+            </summary>
+            <returns>Time elapsed since the Timer was started.</returns>
+        </member>
+        <member name="M:SSSL.Timer.GetPercentage">
+            <summary>
+            Returns the percentage of the duration elapsed since the Timer was started.
+            </summary>
+            <returns>Percentage of the duration elapsed since the Timer was started.</returns>
+        </member>
+        <member name="M:SSSL.Timer.GetStartTime">
+            <summary>
+            Returns the start time of the timer.
+            </summary>
+            <returns>Start time of timer.</returns>
+        </member>
+        <member name="M:SSSL.Timer.GetDuration">
+            <summary>
+            Returns the duration of the timer.
+            </summary>
+            <returns>Duration of the timer.</returns>
+        </member>
+        <member name="M:SSSL.Timer.IsDone">
+            <summary>
+            Returns a boolean indicating if the Timer is done.
+            </summary>
+            <returns>A boolean indicating if the Timer is done.</returns>
+        </member>
+        <member name="M:SSSL.Timer.IsReversed">
+            <summary>
+            Returns a boolean indicating if the Timer is reversed.
+            </summary>
+            <returns>A boolean indicating if the Timer is reversed.</returns>
+        </member>
+        <member name="M:SSSL.Timer.Reset">
+            <summary>
+            Resets the Timer so that the elapsed time is 0.
+            </summary>
+        </member>
+        <member name="M:SSSL.Timer.Reset(System.Single)">
+            <summary>
+            Resets the Timer so that the elapsed time is 0 with a new duration.
+            </summary>
+            <param name="duration">Set Timer duration: from 0, to infinity.</param>
+        </member>
+        <member name="M:SSSL.Timer.SetTime(System.Single)">
+            <summary>
+            Set the time of the Timer.
+            </summary>
+            <param name="time">From 0, to duration.</param>
+        </member>
+        <member name="M:SSSL.Timer.SetPercentage(System.Single)">
+            <summary>
+            Set the percentage of the Timer.
+            </summary>
+            <param name="percentage">From 0, to 1.</param>
+        </member>
+        <member name="M:SSSL.Timer.Reverse">
+            <summary>
+            Reverse the direction of the timer with the same duration.
+            </summary>
+        </member>
+        <member name="M:SSSL.Timer.Reverse(System.Single)">
+            <summary>
+            Reverse the direction of the timer and set the duration.
+            </summary>
+            <param name="duration">Set the duration of the Timer: from 0, to infinity</param>
+        </member>
+        <member name="M:SSSL.ExtensionMethods.tintAlpha(UnityEngine.Color,System.Single)">
+            <summary>
+            Change the alpha value of the Color by tint.
+            </summary>
+            <param name="color"></param>
+            <param name="tint">change alpha by -1f to 1f</param>
+        </member>
+        <member name="M:SSSL.ExtensionMethods.withTintAlpha(UnityEngine.Color,System.Single)">
+            <summary>
+            Returns this Color with the alpha tinted by tint.
+            </summary>
+            <param name="color"></param>
+            <param name="tint">change alpha by -1f to 1f</param>
+            <returns>this Color tinted by tint</returns>
+        </member>
+        <member name="M:SSSL.ExtensionMethods.withAlpha(UnityEngine.Color,System.Single)">
+            <summary>
+            Returns this Color with the alpha set to alpha.
+            </summary>
+            <param name="color"></param>
+            <param name="alpha">set alpha from 0 to 1f</param>
+            <returns>this Color with alpha set to alpha</returns>
+        </member>
+        <member name="M:SSSL.ExtensionMethods.LerpAlpha(UnityEngine.Color,System.Single,System.Single,System.Single)">
+            <summary>
+            Returns this Color with alpha interpolated between start and end at percentage.
+            </summary>
+            <param name="color"></param>
+            <param name="start">start alpha value from 0 to 1</param>
+            <param name="end">end alpha value from 0 to 1</param>
+            <param name="percentage">evaluation percentage from 0 to 1</param>
+            <returns>this Color with alpha interpolated between start and end at percentage</returns>
+        </member>
+        <member name="M:SSSL.ExtensionMethods.LerpAlpha(UnityEngine.Color,System.Single,System.Single,SSSL.Timer)">
+            <summary>
+            Returns this Color with alpha interpolated between start and end  at the timer's percentage.
+            </summary>
+            <param name="color"></param>
+            <param name="start">start alpha value from 0 to 1</param>
+            <param name="end">end alpha value from 0 to 1</param>
+            <param name="percentage">timer to evaluate Lerp against</param>
+            <returns>this Color with alpha interpolated between start and end at the timer's percentage</returns>
+        </member>
+    </members>
+</doc>
