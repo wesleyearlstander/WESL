@@ -8,3 +8,4 @@ Wesley Earl Stander Library for Unity
 - Tween class that makes use of percentage or timer
 - Extension methods for colours to tint and adjust them
 - Extension methods for transforms to reset and move position over time
+- Fully documented with hover tips
